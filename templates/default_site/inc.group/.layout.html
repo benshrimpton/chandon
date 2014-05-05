@@ -1,72 +1,132 @@
 {mobile_vars}<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Chandon Summer</title>
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="author" content="Chandon Summer" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
-{exp:automin:less attribute:type="text/css" attribute:rel="stylesheet"}
-<link rel="stylesheet/less" type="text/css" href="/css/bootstrap.less">
-<link rel="stylesheet/less" type="text/css" href="/css/main.less">
-{/exp:automin:less}
-<link rel="stylesheet/less" type="text/css" href="/v2/js/vendor/royalslider/royalslider.less">
-<link rel="stylesheet/less" type="text/css" href="/v2/js/vendor/royalslider/skins/default/rs-default.less">
+		<title>Chandon Summer</title>
 
-<script src="/js/vendor/modernizr-2.6.2.min.js"></script>
-</head>
-<body class="{mobile_class}">
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience. We strongly recommend <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Google Chrome</a> for Mac and Windows</p>
-<![endif]-->
+		{exp:automin:less attribute:type="text/css" attribute:rel="stylesheet"}
+		<link type="text/css" rel="stylesheet" href="/css/bootstrap.less" />
+		<link type="text/css" rel="stylesheet" href="/css/main.less" />
+		{/exp:automin:less}
 
 
+		
+	<style type="text/css">
+			.menu {
+				background: #dde;
+				position: fixed;
+				top: 0; left: 0; bottom: 0;
+				max-width: 1000px;
+				width: 30%;
+				z-index: 999;
+				-webkit-transform: translate3d(-100%, 0, 0);
+				transform: translate3d(-100%, 0, 0);
 
-<header class="main-header">
-		<div id="nav-toggler">toggleme</div>	
-		<h1 class="logo"><a href="/">{site_name}</a></h1>
-		<nav class="main-nav">
-		<ul>
-			<li><a href="#block-1" data-url="#block-1" data-title="Section One">Section One</a></li>
-			<li><a href="#block-2" data-url="#block-2" data-title="Section 2">Section two</a></li>
-			<li><a href="#block-3" data-url="#block-3" data-title="Section 3">Section three</a></li>
-			<li><a href="#block-4" data-url="#block-4" data-title="Section 4">Section four</a></li>
+				-webkit-transition: all 0.3s ease-in-out;
+				-moz-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+			}
+			.menu.open {
+				-webkit-transform: translate3d(0, 0, 0);
+				-moz-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
 
-		</ul>
+			.menu-toggle-button {
+				position: fixed;
+				top: 0; right: 0;
+				border: none;
+				padding: 0.6em 1.2em;
+				background: #111;
+				color: #fff;
+				font-family: 'Lato', Calibri, Arial, sans-serif;
+				font-size: 1em;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				cursor: pointer;
+				display: inline-block;
+				margin: 3px 2px;
+			}
+
+			button:hover {
+				background: #222;
+			}
+
+			#one, #two, #three, #four {
+				height: 700px;
+				background: #2a2;
+			}
+			#two, #four {
+				background: #a2a;
+			}
+	</style>
+
+	</head>
+	<body>
+		<div id="page">
+
+
+			<header id="header" class="">
+
+			
+
+				<div class="">
+					<button class="menu-toggle-button">Menu</button>
+				</div>
+				
+				{embed="inc/.social_share"}
+			</header>
+
+
+			<main id="content">
+
+				{layout:contents}
+
+			</main>
+
+
+			
+
+
+			
+
+
+			<footer id="footer" class="mm-fixed-bottom">
+				<h4 class="shop-it">
+					<a href="#" target="_blank">SHOP IT</a>
+				</h4>
+			</footer>
+
+
+		</div>
+
+
+		<nav class="menu">
+			<button class="menu-toggle-button">Menu</button>
+			<h2 class="">Sidebar</h2>
+			<ul>
+				<li><a class="icon icon-data" href="#one">Data Management</a></li>
+				<li><a class="icon icon-location" href="#second">Location</a></li>
+				<li><a class="icon icon-study" href="#three">Study</a></li>
+				<li><a class="icon icon-photo" href="#three">Collections</a></li>
+				<li><a class="icon icon-wallet" href="#three">Credits</a></li>
+			</ul>
 		</nav>
-</header>
-
-{layout:contents}
-
-
-
-<div id="page-loader">Loading....</div>
 
 
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/v2/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
-{exp:automin:js}
-<script src="/js/vendor/waitForImages.js"></script>
-<script src="/js/main.js"></script>
-{/exp:automin:js}
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		{!-- {exp:automin:js}{/exp:automin:js} --}
+		<script type="text/javascript" src="/src/js/jquery.mmenu.js"></script>
+		<script type="text/javascript" src="/js/vendor/jquery.easing.js"></script>
+		<script type="text/javascript" src="/js/vendor/waitForImages.js"></script>
+		<script type="text/javascript" src="/js/vendor/fitvids.js"></script>
+		<script type="text/javascript" src="/js/main.js"></script>
 
-
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-e.src='//www.google-analytics.com/analytics.js';
-r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-ga('create','UA-XXXXX-X');ga('send','pageview');
-</script>
-</body>
+	</body>
 </html>

@@ -1,0 +1,20 @@
+{mobile_vars}
+<section id="third" class="section cocktails">
+	<article class="inner">
+	
+		{hamburger}
+		{embed="inc/.social-share"}
+
+
+	<? if( $isiPhone ||  $isAndroid ): ?>
+		{embed="inc/.recipe-slider-mobile"}
+		<? else: ?>
+		{embed="inc/.recipe-slider"}
+	<? endif; ?>		
+		
+		{bars}
+		<div class="small-logo recipies"><small>Chandon Summer</small></div>
+
+	</article>	
+	{embed="inc/.shop-it-link"}
+</section>

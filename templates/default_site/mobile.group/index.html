@@ -1,141 +1,20 @@
+{embed="inc/.header"}
 
-{mobile_vars}<!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
-		<meta name="author" content="www.frebsite.nl" />
-		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+{embed="inc/.age-gate"}
 
-		<title>Chandon Summer</title>
-
-		{exp:automin:css attribute:type="text/css" attribute:rel="stylesheet"}
-		<link type="text/css" rel="stylesheet" href="/src/css/demo.css" />
-		<link type="text/css" rel="stylesheet" href="/src/css/jquery.mmenu.all.css" />
-		{/exp:automin:css}
-		{exp:automin:less attribute:type="text/css" attribute:rel="stylesheet"}
-		<link type="text/css" rel="stylesheet" href="/css/main.less" />
-		{/exp:automin:less}
-
-
+<main id="content">
 		
-		<script type="text/javascript">
+	{embed="inc/.section_intro"}
+	
+	{embed="inc/.section_about"}
+	
+	{embed="inc/.section_entertaining"}
+	
+	{embed="inc/.section_cocktails"}
 
-		alert("You have {exp:mobile_detect:device} ! ")
-
-		</script>
-
-	</head>
-	<body>
-		<div id="page">
-
-
-			<header id="header" class="mm-fixed-top">
-
-			
-
-			<div class="menu-wrapper">
-				<a href="#menu" id="menu-toggle"><p>MENU</p></a>
-			</div>
-				
-				<ul class="social-share">
-					<li><a href="#" title="Follow on Facebook">&#xe027;</a></li>
-					<li><a href="#" title="Follow on Instagram">&#xe100;</a></li>
-					<li><a href="#" title="Follow on Pinterest">&#xe064;</a></li>
-					<li><a href="#" title="Follow on Twitter">&#xe086;</a></li>
-				</ul>
-			</header>
+</main>
 
 
-			<main id="content">
+{embed="inc/.menu"}
+{embed="inc/.footer"}
 
-			{exp:channel:entries channel="homepage_image" limit="1" disbale="member_data|trackbacks|commnents|custom_fields"}
-
-			<? if($isiPhone || $isAndroid || $isBlackberry):?>
-				<section id="intro" class="section" style="background-image: url({homepage_image_handheld})">
-			<? endif; ?>
-
-			<? if($isiPad):?>
-				<section id="intro" class="section" style="background-image: url({homepage_image_tablet})">
-			<? endif; ?>	
-
-			<? if(!$isiPhone || !$isAndroid || !$isBlackberry || !$isiPad): ?>
-				<section id="intro" class="section" style="background-image: url({homepage_image})">	
-			<? endif; ?>	
-
-					<article class="inner">
-					<h1 class="logo">Chandon Summer</h1>
-						{bars}
-					</article>
-				</section>
-			{/exp:channel:entries}	
-
-
-				<section id="first" class="section about">
-					<article class="inner">
-						<div class="table">
-							<div class="table-cell">
-								<div class="">
-									<h1>About Chandon Summer</h1>
-									<h2>Welcome to Chandon Summer, where the sun always shines, the cocktails create a stir, and there’s a little bit of beach in every bottle.</h2>
-									<p>Since 2011, we’ve been releasing limited-edition summer bottles that capture the spirit of the season. This year’s third-anniversary bottle was inspired by seaside dreams and poolside parties, with a distinctly nautical vibe.</p>
-									<p>But just like summer, Chandon’s limited-edition summer bottle won’t last forever. Get yours now before they’re gone.</p>
-								</div>
-							</div>							
-						</div>
-						<a href="#menu">Open the menu</a>
-						{bars}
-					</article>
-				</section>
-
-
-
-				<section id="second" class="section entertaining">
-					<article class="inner">
-						<h1>Entertaining</h1>
-						<a href="#menu">Open the menu</a>
-						{bars}
-					</article>
-				</section>
-				<section id="third" class="section cocktails">
-					<article class="inner">
-						<h1>Cocktails</h1>
-						<a href="#menu">Open the menu</a>
-						{bars}
-					</article>	
-				</section>
-
-
-			</main>
-
-
-			
-
-
-			<nav id="menu">
-
-				<ul>
-					<li><h2>MENU</h2></li>
-					<!-- <li><a href="#content">Top</a></li> -->
-					<li><a href="#first">About</a></li>
-					<li><a href="#second">Entertaining</a></li>
-					<li><a href="#third">Cocktails</a></li>
-				</ul>
-			</nav>
-
-
-			<footer id="footer" class="mm-fixed-bottom"><h4 class="shop-it"><a href="#" target="_blank">SHOP IT</a></h4></footer>
-
-
-		</div>
-
-
-
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		{!-- {exp:automin:js}{/exp:automin:js} --}
-		<script type="text/javascript" src="/src/js/jquery.mmenu.js"></script>
-		<script type="text/javascript" src="/js/vendor/jquery.easing.js"></script>
-		<script type="text/javascript" src="/js/vendor/waitForImages.js"></script>
-		<script type="text/javascript" src="/js/main.js"></script>
-
-	</body>
-</html>

@@ -1,0 +1,34 @@
+<div class="rs-wrapper-desktop">
+	<div class="royalSlider rsDefault">
+	
+	
+		{exp:channel:entries channel="" limit="3" disable="comments|trackbacks|memeber_data"}
+		<!-- HTML content (100% with and height) -->
+		<div class="eachSlide">
+			<div class="fourty">
+				<img class="" src="{image}" alt="{title}" />
+			</div>
+			<div class="sixty recipe">
+				<h2 class="cocktail-title">{title}</h2>
+				
+				<div class="ingrdients row">
+					<div class="col-md-6 text-right">
+					{ingredients}
+						<p><b>{ingredients:quantity} :</b></p>
+					{/ingredients}
+					</div>
+					<div class="col-md-6 text-left">
+					{ingredients}
+					<span>{ingredients:value}</span>
+					{/ingredients}
+					</div>
+				</div>
+				
+				<div class="directions">{directions}</div>
+			</div>
+		</div>
+		{/exp:channel:entries}	
+	
+
+	</div>
+</div>

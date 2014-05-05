@@ -1,0 +1,33 @@
+{mobile_vars}
+{exp:channel:entries channel="about" limit="1" disable="member_data|comments|trackbacks"}
+<section id="first" class="section about">
+	<article class="inner">
+	
+	{hamburger}
+	{embed="inc/.social-share"}
+	
+		<div class="about-left">
+			<div class="table">
+				<figure class="table-cell">
+					<img src="{about_image}" class="img-responsive" />
+				</figure>
+			</div>
+		</div>
+				
+		<div class="about-right">
+			<div class="table">
+				<div class="table-cell">
+					<h1>{title}</h1>
+					<h2>{about_sub_title}</h2>
+					{about_text}
+				</div>
+			</div>
+		</div>		
+									
+		{bars}
+		<div class="small-logo about"><small>Chandon Summer</small></div>
+	</article>
+	{embed="inc/.shop-it-link"}
+	
+</section>
+{/exp:channel:entries}

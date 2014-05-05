@@ -13,7 +13,8 @@ auto;background:url(/css/img/logo.png) no-repeat center center;text-indent:-1000
 #intro .left-bar{background-image:url(/css/img/line_vertical_01.png);background-repeat:repeat-y}#intro .bottom-bar,
 #intro .top-bar{background-image:url(/css/img/line_horizontal_01.png);background-repeat:repeat-x}#footer{background:transparent;height:40px;line-height:40px}#footer
 *{margin:0px;padding:0px}.shop-it{display:inline-block;margin:0px;height:40px;line-height:40px;padding:0
-20px !important}.table{display:table;height:100%;width:100%}.table-cell{display:table-cell;height:100%;width:100%;vertical-align:middle}.about{text-align:center}.social-share{float:right}.social-share,
+20px !important}.table{display:table;height:100%;width:100%}.table-cell{display:table-cell;height:100%;width:100%;vertical-align:middle}.about{text-align:center;color:#24418B;background:white}.about
+*{color:#24418B}.social-share{float:right}.social-share,
 .social-share  li,
 .social-share  li
 a{display:inline-block;font-family:'Mono Social Icons Font'}.social-share li

@@ -1,0 +1,29 @@
+{mobile_vars}
+{exp:channel:entries channel="homepage_image" limit="1" disbale="member_data|trackbacks|commnents|custom_fields"}
+
+	<? if($isiPhone || $isAndroid || $isBlackberry):?>
+	
+	<section id="intro" class="section" style="background-image: url({homepage_image_handheld})">
+	
+		<? else: ?>
+	
+	<section id="intro" class="section" style="background-image: url({homepage_image})">
+			
+	<? endif; ?>
+
+	<article class="inner">
+		
+		{hamburger}
+		{embed="inc/.social-share"}
+
+		<h1 class="logo">Chandon Summer</h1>
+		{bars}
+		
+		<div class="small-logo intro"><small>Chandon Summer</small></div>
+	</article>
+	
+	
+	{embed="inc/.shop-it-link"}
+	
+</section>
+{/exp:channel:entries}

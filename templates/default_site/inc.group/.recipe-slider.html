@@ -2,29 +2,44 @@
 	<div class="royalSlider rsDefault">
 	
 	
-		{exp:channel:entries channel="" limit="3" disable="comments|trackbacks|memeber_data"}
+		{exp:channel:entries channel="recipies" limit="3" disable="comments|trackbacks|memeber_data" sort="asc"}
 		<!-- HTML content (100% with and height) -->
 		<div class="eachSlide">
 			<div class="fourty">
 				<img class="" src="{image}" alt="{title}" />
 			</div>
-			<div class="sixty recipe">
-				<h2 class="cocktail-title">{title}</h2>
+			
+	
 				
-				<div class="ingrdients row">
-					<div class="col-md-6 text-right">
-					{ingredients}
-						<p><b>{ingredients:quantity} :</b></p>
-					{/ingredients}
-					</div>
-					<div class="col-md-6 text-left">
-					{ingredients}
-					<span>{ingredients:value}</span>
-					{/ingredients}
+					<div class="sixty recipe">
+							<div class="table">
+									<div class="table-cell">
+				
+									<h2 class="cocktail-title">{title}</h2>
+									
+									<div class="ingrdients row ingrdients-row">
+									
+										<div class="col-sm-5 col-md-5 text-right">
+										{ingredients}
+											{if ingredients:quantity}<p><b>{ingredients:quantity}</b></p>{/if}
+										{/ingredients}
+										</div>
+										
+										<div class="col-sm-7 col-md-7 text-left">
+										{ingredients}
+											<p><span>{ingredients:value}</span></p>
+										{/ingredients}
+										</div>
+										
+									</div>
+									
+									<div class="directions text-center">
+									<h3 class="directions-title">Directions</h3>
+										{directions}
+									</div>
 					</div>
 				</div>
-				
-				<div class="directions">{directions}</div>
+		
 			</div>
 		</div>
 		{/exp:channel:entries}	

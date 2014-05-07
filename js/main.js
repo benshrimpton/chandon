@@ -1,3 +1,11 @@
+$(window).on('load',function(){
+	
+	//alert("loaded")
+	window.location.hash="";
+});
+
+
+
 //we need to know wether we;'re mobile or not.
 // Lets use scren width for this.
 var screenWidth = $(window).width();
@@ -10,13 +18,57 @@ else {
 var isMobile = $('body').hasClass('mobile');
 //alert(isMobile);
 
+
+
+
+
+ //only do this is not mobile. 
+function resizeFirstSection(){
+	var winheight = $(window).height();
+	var winWidth = $(window).width();
+	var firstSection = $('.inner');
+	var firstSectionOnly = $('#intro .inner');
+	var cocktails = $('.cocktails .inner');
+	
+		if ( isMobile == false ) {
+			firstSection.css({
+			    'min-width': winWidth+'px',
+			    'height': winheight+'px'
+			  });
+			 cocktails.css({
+			    'min-width': winWidth+'px',
+			    'height': winheight+'px'
+			  });	
+	
+		}
+		if ( isMobile == true ) {
+			firstSectionOnly.css({
+			    'min-width': winWidth+'px',
+			    'height': winheight+'px'
+			  });	
+		}
+}
+resizeFirstSection();
+
+
+
+
+
+
+
+
+
 // Do Fitvids.
 $('.video-wrapper').fitVids();
 
 
 
+
+
 $('.menu a[href*=#]:not([href=#])').click(function(e) {
 
+	var newUrl = $(this).data('url');
+	
   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -29,6 +81,9 @@ $('.menu a[href*=#]:not([href=#])').click(function(e) {
       }, 300, 'easeInOutCubic', function(){
 
         $('.menu').removeClass('open');
+        
+        
+        history.pushState("hello", "foo", '#'+newUrl);
 
       });
       return false;
@@ -67,25 +122,6 @@ $('#contact-row').waitForImages(function() {
   }, $.noop, true);
 */
   
- //only do this is not mobile. 
-if ( !isMobile ) {
-	function resizeFirstSection(){
-	var winheight = $(window).height();
-	var winWidth = $(window).width();
-	var firstSection = $('.inner');
-	
-	  firstSection.css({
-	    'min-width': winWidth+'px',
-	    'height': winheight+'px'
-	  });
-	}
-	resizeFirstSection();
-}
-
-
-  
-
-
 
 
 
@@ -93,7 +129,7 @@ if ( !isMobile ) {
 
 $(document).ready(function(){
 
-	resizeFirstSection();
+	//resizeFirstSection();
 
 	//USe the wait for image plugin.
 	$.waitForImages.hasImgProperties = ['backgroundImage']
@@ -106,7 +142,8 @@ $(document).ready(function(){
         // options go here
         // as an example, enable keyboard arrows nav
         keyboardNavEnabled: true,
-        navigateByClick: false
+        navigateByClick: false,
+        arrowsNav: false
     });
     
     
@@ -124,16 +161,16 @@ $(document).ready(function(){
 
 $(window).on('resize', function(){
 
-resizeFirstSection();
-var screenWidth = $(window).width();
-var isMobile = $('body').hasClass('mobile');
-
-if ( screenWidth <= 640) {
-	$('body').addClass('mobile');
-}
-else {
-	$('body').removeClass('mobile');
-}
+		resizeFirstSection();
+		var screenWidth = $(window).width();
+		var isMobile = $('body').hasClass('mobile');
+		
+		if ( screenWidth <= 640) {
+			$('body').addClass('mobile');
+		}
+		else {
+			$('body').removeClass('mobile');
+		}
 
 
 
@@ -197,5 +234,21 @@ if($.cookie('the_cookie') != null) {
 else {
 	//alert('cookie not set');
 }
+
+
+/*
+var t = $(".section").offset().top;
+$(".section").each(function(){
+  $(window).scroll(function(){
+if($(this).scrollTop() > t )
+{   
+location.hash = $(this).attr('id');
+console.log( $(this).attr('id') )
+}
+});
+});
+              
+*/
+
 		
 		

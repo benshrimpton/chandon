@@ -1,14 +1,45 @@
 @font-face {
-/* FROM : http://drinchev.github.io/monosocialiconsfont/ */
-    font-family: 'Mono Social Icons Font';
-    src: url('/css/fonts/MonoSocialIconsFont-1.10.eot');
-    src: url('/css/fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
-         url('/css/fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
-         url('/css/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
-         url('/css/fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-    src: url('/css/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
+font-family: 'Mono Social Icons Font';
+src: url('/css/fonts/MonoSocialIconsFont-1.10.eot');
+src: url('/css/fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+url('/css/fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
+url('/css/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+url('/css/fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+src: url('/css/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
+font-weight: 100;
+font-style: normal;
+}
+@font-face {
+font-family: 'TradeGothicBold';
+src: url('/css/fonts/trade-gothic-bold.eot');
+src: url('/css/fonts/trade-gothic-bold.eot') format('embedded-opentype'),
+url('/css/fonts/trade-gothic-bold.woff') format('woff'),
+url('/css/fonts/trade-gothic-bold.ttf') format('truetype'),
+url('/css/fonts/trade-gothic-bold.svg#TradeGothicBold') format('svg');
+}
+@font-face {
+font-family: 'TradeGothicLightLight';
+src: url('/css/fonts/trade-gothic-light.eot');
+src: url('/css/fonts/trade-gothic-light.eot') format('embedded-opentype'),
+url('/css/fonts/trade-gothic-light.woff') format('woff'),
+url('/css/fonts/trade-gothic-light.ttf') format('truetype'),
+url('/css/fonts/trade-gothic-light.svg#TradeGothicLightLight') format('svg');
+}
+@font-face {
+font-family: 'TradeGothicNo.2Bold';
+src: url('/css/fonts/trade-gothic-no-2-bold.eot');
+src: url('/css/fonts/trade-gothic-no-2-bold.eot') format('embedded-opentype'),
+url('/css/fonts/trade-gothic-no-2-bold.woff') format('woff'),
+url('/css/fonts/trade-gothic-no-2-bold.ttf') format('truetype'),
+url('/css/fonts/trade-gothic-no-2-bold.svg#TradeGothicNo.2Bold') format('svg');
+}
+@font-face {
+font-family: 'TradeGothicNo.20CondensedBold';
+src: url('/css/fonts/trade-gothic-no-20-condensed-bold.eot');
+src: url('/css/fonts/trade-gothic-no-20-condensed-bold.eot') format('embedded-opentype'),
+url('/css/fonts/trade-gothic-no-20-condensed-bold.woff') format('woff'),
+url('/css/fonts/trade-gothic-no-20-condensed-bold.ttf') format('truetype'),
+url('/css/fonts/trade-gothic-no-20-condensed-bold.svg#TradeGothicNo.20CondensedBold') format('svg');
 }
 
 
@@ -40,64 +71,73 @@ body{font:13px/1.231 sans-serif;height:100%;}.clear{clear:both;}.chromeframe{pos
 
 /* Bootstrap overides */
 .modal-open {
-	overflow: visible
+	overflow: visible;
+}
+.select {
+	max-width: 200px;
 }
 /* END bootstrap overides */
 
-
-
 .transition-medium {
 	-webkit-transition: all ease-in-out .3s;
-    -moz-transition: all ease-in-out .3s;
-    transition: all ease-in-out .3s;
+	-moz-transition: all ease-in-out .3s;
+	transition: all ease-in-out .3s;
 }
 a:hover {
 	text-decoration: none;
 	color: inherit;
 }
-body, html {
-    height: 100%;
+body,
+html {
+	height: 100%;
 }
-body. {
-	overflow: hidden;
+body {
+	font-family: 'TradeGothicLightLight';
+}
+p {
+	font-size: 16px;
+	line-height: 24px;
+}
+b {
+	font-family: 'TradeGothicNo.20CondensedBold';
 }
 body.cookie-set {
-	overflow: auto
+overflow: auto
 }
 .logo {
-    width: 224px;
-    height: 81px;
-    display: block;
-    margin: 0 auto;
-    background: url(/css/img/logo.png) no-repeat center center;
-    text-indent: -100000px;
-    overflow: hidden;
+	width: 226px;
+	height: 81px;
+	display: block;
+	margin: 30px auto 0 auto;
+	background: url(/css/img/logo.png) no-repeat center center;
+	text-indent: -100000px;
+	overflow: hidden;
 }
 .small-logo {
-	border: solid 1px red;
 	position: absolute;
-	right: 60px;
-	bottom: 60px;
-	background: url(/css/img/small_logo.png) no-repeat;
-	height: 70px;
-	width: 400px;
+	right: 80px;
+	bottom: 70px;
+	height: 40px;
+	width: 222px;
 	overflow: hidden;
 	text-indent: -10000px;
-}
-.small-logo.intro {
 	background-position: 0 0;
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
-.small-logo.about {
-	background-position: -1600px 0 !important;
+.small-logo-intro {
+	background-image: url(/css/img/small_logo_intro.png);
 }
-.small-logo.recipies {
-	background-position: -1600px 0 !important;
+.small-logo-about {
+	background-image: url(/css/img/small_logo_about.png);
 }
-.small-logo.entertaining {
-	background-position: -2400px 0 !important;
+.small-logo-recipies {
+	background-image: url(/css/img/small_logo_recipies.png);
+}
+.small-logo-entertaining {
+	background-image: url(/css/img/small_logo_entertaining.png);
 }
 .main-header {
-	border: solid 2px red;
 	position: fixed;
 	left: 0;
 	right:0px;
@@ -122,7 +162,7 @@ body.cookie-set {
 	-webkit-transform: translate3d(-100%, 0, 0);
 	-moz-transform: translate3d(-100%, 0, 0);
 	transform: translate3d(-100%, 0, 0);
-
+	
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
@@ -134,13 +174,18 @@ body.cookie-set {
 }
 .menu a {
 	color: white;
-	font-size: 2em;
+	font-size: 2.5em;
 	display: inline-block;
 	border-bottom: solid 2px white;
 	padding-bottom: 30px;
 	margin-bottom: 30px;
+	font-family: 'TradeGothicNo.2Bold';
+	letter-spacing: -1px;
+	.transition-medium;
+	font-weight: lighter;
 	&:hover {
 		color: white;
+		opacity: .6;
 	}
 	&.active {
 		background: red;
@@ -149,10 +194,9 @@ body.cookie-set {
 
 .menu-toggle-button-wrapper {
 	position: absolute;
-	top: 60px;
-	left: 60px;
+	top: 70px;
+	left: 70px;
 	border: none;
-	padding: 0.6em 1.2em;
 	background: transparent;
 	color: #fff;
 	font-size: 1em;
@@ -162,12 +206,16 @@ body.cookie-set {
 	display: inline-block;
 	margin: 3px 2px;
 	z-index: 999;
-	height: 60px;
-	width: 90px;
+	height: 20px;
+	width: 104px;
+	.transition-medium;
+	&:hover {
+		opacity: .8;
+	}
 }
 .menu-toggle-button-wrapper button {
 	background: transparent;
-	height: 60px;
+	height: 30px;
 	width: 60px;
 	position: absolute;
 	left: 0;
@@ -179,7 +227,32 @@ body.cookie-set {
 	position: absolute;
 	top:0;
 	right: 0;
+	font-size: 24px;
+	line-height: 23px;
+	font-family: 'TradeGothicNo.20CondensedBold';
 }
+.firefox .menu-toggle-button-wrapper span {
+line-height: 12px;
+}
+.menu-toggle-button.menu-closer span {
+	position: absolute;
+	left: 0;
+	color: white;
+	text-indent: 0px;
+	font-size: 30px;
+	height: 53px;
+	width: 53px;
+	top: 0;
+	line-height: 53px;
+	.transition-medium;
+}	
+.menu-toggle-button.menu-closer:hover {
+	opacity: .8;
+}
+.menu-toggle-button.menu-closer:hover span {
+	-webkit-transform: rotate(360deg);
+} 	
+	
 .menu .menu-toggle-button {
 	width: 60px;
 	height: 60px;
@@ -218,6 +291,27 @@ button:focus {
 	margin-bottom: 3px;
 	position: relative
 }
+.about .menu-toggle-button-wrapper span {
+	color: #24418B;
+}
+.about .hamburger .line {
+	background: #24418B;
+	
+}
+.entertaining .menu-toggle-button-wrapper span {
+	color: #c39c2c;
+}
+.entertaining .hamburger .line {
+	background: #c39c2c;
+	
+}
+.cocktails .menu-toggle-button-wrapper span {
+	color: #eb3268;
+}
+.cocktails .hamburger .line {
+	background: #eb3268;
+	
+}
 
 
 
@@ -246,84 +340,91 @@ button:focus {
     padding: 0px;
     margin: 0px;
     padding-bottom: 40px;
+    min-height: 815px !important;
 }
 .inner {
     position: relative;
-    padding: 60px;
-    min-height: 480px !important;
+    padding: 40px;
+    min-height: 700px !important;
 }
 
 
+/* ############ ENTERTAINING ############ */
+.video-wrapper {
+	display: block;
+	margin: 0 auto 24px auto;
+	border: solid 6px;
+}
 
 
 /* **************** BARS **************** */
 .bar {
-    min-width: 16px;
-    min-height: 16px;
+    min-width: 30px;
+    min-height: 30px;
     position: absolute;
 }
 .left-bar {
-    left:40px;
-    top:40px;
-    bottom: 40px;
+	left: 30px;
+	top: 60px;
+	bottom: 60px;
 }
 .right-bar {
-    right: 40px;
-    top:40px;
-    bottom: 40px;
+    right: 30px;
+    top:60px;
+    bottom: 60px;
 }
 .bottom-bar {
-    left: 56px;
-    right: 56px;
-    bottom: 40px;  
+    left: 30px;
+    right: 30px;
+    bottom: 30px;  
 }
 .top-bar {
-    top:40px;
-    left: 56px;
-    right: 56px; 
+    top:30px;
+    left: 30px;
+    right: 30px; 
 }
 #intro .right-bar,
 #intro .left-bar {
-    background-image: url(/css/img/line_vertical_01.png);
+    background-image: url(/css/img/WAVE-GRAPHIC-WHITE-VERTICAL.png);
     background-repeat: repeat-y;
 }
 #intro .bottom-bar,
 #intro .top-bar {
-    background-image: url(/css/img/line_horizontal_01.png);
+    background-image: url(/css/img/WAVE-GRAPHIC-WHITE.png);
     background-repeat: repeat-x;
 }
 
 .about .right-bar,
 .about .left-bar {
-    background-image: url(/css/img/line_vertical_02.png);
+    background-image: url(/css/img/WAVE-GRAPHIC-BLUE-VERTICAL.png);
     background-repeat: repeat-y;
 }
 .about .bottom-bar,
 .about .top-bar {
-    background-image: url(/css/img/line_horizontal_02.png);
+    background-image: url(/css/img/WAVE-GRAPHIC-BLUE.png);
     background-repeat: repeat-x;
 }
 
 
 .entertaining .right-bar,
 .entertaining .left-bar {
-    background-image: url(/css/img/line_vertical_03.png);
+    background-image: url(/css/img/WAVE-GRAPHIC-GOLD-VERTICAL.png);
     background-repeat: repeat-y;
 }
 .entertaining .bottom-bar,
 .entertaining .top-bar {
-    background-image: url(/css/img/line_horizontal_03.png);
+    background-image: url(/css/img/WAVE-GRAPHIC-GOLD.png);
     background-repeat: repeat-x;
 }
 
 .cocktails .right-bar,
 .cocktails .left-bar {
-    background-image: url(/css/img/line_vertical_04.png);
+    background-image: url(/css/img/WAVE-GRAPHIC-RED-VERTICAL.png);
     background-repeat: repeat-y;
 }
 .cocktails .bottom-bar,
 .cocktails .top-bar {
-    background-image: url(/css/img/line_horizontal_04.png);
+    background-image: url(/css/img/WAVE-GRAPHIC-RED.png);
     background-repeat: repeat-x;
 }
 /* **************** END BARS **************** */
@@ -332,48 +433,105 @@ button:focus {
 .main-footer {
     background: #eb3268;
 	color: white;
-	padding: 20px 40px;
+	padding: 30px 40px;
+	p {
+		font-family: 'TradeGothicNo.20CondensedBold';
+		margin: 0 0 12px 0;	
+	}
 	.footer-link {
 		background: white;
 		display: inline-block;
-		padding: 20px 0;
-		width: 99%;
+		padding: 5px 20px 2px 20px;
 		color: #eb3268;
 		text-align: center;
+		font-family: 'TradeGothicNo.20CondensedBold';
+		text-transform: uppercase;
+		font-size: 19px;
+		letter-spacing: 2px;
+		width: 90%;
+		margin-bottom: 16px;
 		.transition-medium;
 		&:hover {
-				background: #EB329E;
-				color: white;
+			opacity: .5;
 		}
 	}
 }
 .main-footer * {
+/*
     margin: 0px;
-    padding: 0px; 
+    padding: 0px;
+*/ 
 }
 .shop-it-now {
 	color: white;
 	margin: 0 auto;
-	height: 40px;
-	line-height: 40px;
-	display: inline-block;
+	display: block;
 	position: absolute;
 	left: 50%;
-	display: inline-block;;
-	bottom: 70px;
-	width: 280px;
-	margin: 0 0 0 -140px;
+	display: inline-block;
+	bottom: 22px;
+	width: 370px;
+	margin: 0 0 0 -185px;
 	text-align: center;
+	font-family: 'TradeGothicNo.20CondensedBold';
+	z-index: 999;
+	background: white;
 	a {
 		display: inline-block;
-		padding: 0 20px;
-		background: blue;
+		padding: 7px 0px 3px;
 		.transition-medium; 
-		letter-spacing: 2px;
+		letter-spacing: 6px;
+		margin: 0;
+		font-size: 30px;
 		&:hover {
 			background: black;
 		}
 	}
+}
+.shop-it-now:before {
+	content: "";
+	display: block;
+	height: 50px;
+	width: 6px;
+	background: white;
+	position: absolute;
+	left: -6px;
+	top:0px;
+}
+.shop-it-now:after {
+	content: "";
+	display: block;
+	height: 50px;
+	width:6px;
+	background: white;
+	position: absolute;
+	right: -6px;	
+	top:0;
+}
+#intro .shop-it-now:after,
+#intro .shop-it-now:before {
+	background: transparent;
+}
+
+
+
+#first .shop-it-now {
+	background : #254388;
+}
+#second .shop-it-now {
+	background : #c39c2c;
+}
+#third .shop-it-now {
+	background : #eb3268;
+}
+
+
+
+
+
+
+.firefox .shop-it-now a {
+	padding: 0px 20px 3px;
 }
 #intro .shop-it-now a {
 	background: white;
@@ -424,24 +582,21 @@ button:focus {
 }
 .about-left {
 	position: absolute;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
+	top: 80px;
+	left: 80px;
+	bottom: 80px;
 	width: 40%;
-	
+	overflow: hidden
 }
 .about-left img {
-	width: 90%;
-	position: absolute;
-	top: 40px;
-	left: 80px;
+	max-height: 100%;
 }
 .about-right {
 	position: absolute;
-	top: 0px;
-	right: 0px;
-	width: 60%;
-	bottom: 0px;
+	top: 80px;
+	right: 80px;
+	width: 50%;
+	bottom: 80px;
 }
 .about-right .table {
 	padding: 40px 80px 40px 40px;
@@ -453,15 +608,11 @@ button:focus {
 	top: 0px;
 	width: auto;
 }
-
-
-
-
 .social-share {
     position: absolute;
     top:60px;
     right: 20px;
-    margin-right: 40px;
+    margin-right: 50px;
     z-index: 999;
 }
 .social-share,
@@ -474,7 +625,7 @@ button:focus {
     border: solid 1px red;
     margin-left: -4px;
     height: 40px;
-    width: 30px;
+    width: 35px;
     border: none;
     text-decoration: none;
     font-size: 40px;
@@ -520,7 +671,28 @@ button:focus {
 	top: 100px;
 	right: 70px;
 	bottom: 80px;
-	border: solid 2px red;
+	text-align: center;
+}
+.mobile-image {
+	position: absolute;
+	left: 0;
+	top:0;
+	bottom: 0;
+	right: 0;
+	z-index: 1 !important;
+	img {
+		height: 100%;
+		width: auto;
+		display: block;
+		margin: 0 auto;
+	}
+}
+.eachSlide-header {
+	z-index: 10000;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 10000 !important
 }
 .royalSlider {
 	position: absolute;
@@ -530,6 +702,8 @@ button:focus {
 	bottom: 0;
 	width: 100%;
 	height: 100%;
+	min-width: 260px;
+	min-height: 260px;
 	background: #fff;
 }
 
@@ -541,7 +715,14 @@ button:focus {
 	font-size: 4em;
 	font-weight: 700;
 }
-
+.modal-content {
+	text-align: center;
+}
+.modal-content h2 {
+	font-family: 'TradeGothicBold';
+	letter-spacing: -1px;
+	font-size: 24px;
+}
 .fourty,
 .sixty {
 	position: absolute;
@@ -549,18 +730,21 @@ button:focus {
 }
 
 .fourty {
-	top: 0; left: 0; bottom: 0; right: 60%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 60%;
 	height: 100%;
 	padding: 0px;
-	/*background: #ddd;*/
 }
 
 .sixty {
-	top: 0; left: 40%; bottom: 0; right: 0;
+	top: 0;
+	left: 40%;
+	bottom: 0;
+	right: 0;
 	height: 100%;
-	padding: 10%;
 	text-align: center;
-	/*background: #888;*/
 }
 
 .fourty img {
@@ -614,15 +798,49 @@ button:focus {
 
 
 /* ############# RECIPES ############# */
+.page-title,
 .cocktail-title {
-	font-size: 3em;
-	border-bottom: double 3px;
+	font-size: 48px;
 	display: inline-block;
-	margin: 0 auto 30px auto;
-	padding: 0 0 30px 0;
+	margin: 0 auto 0px auto;
+	padding: 0 0 0px 0;
+	font-family: 'TradeGothicNo.2Bold';
+	letter-spacing: -2px;
 }
-
-
+.entertaining .page-title{
+	padding: 0;
+	
+}
+.entertaining .page-title:after {
+	content: "";
+	display: block;
+	height: 30px;
+	width: 100%;
+	background: url(/css/img/WAVE-GRAPHIC-GOLD.png) repeat-x;
+	margin: 20px 0 30px 0;	
+}
+.about .page-title:after {
+	content: "";
+	display: block;
+	height: 30px;
+	width: 100%;
+	background: url(/css/img/WAVE-GRAPHIC-BLUE.png) repeat-x;
+	margin: 20px 0 30px 0;	
+}
+.cocktail-title:after {
+	content: "";
+	display: block;
+	height: 30px;
+	width: 100%;
+	background: url(/css/img/WAVE-GRAPHIC-RED.png) repeat-x;
+	margin: 30px 0;
+}
+.page-sub-title {
+	font-family: 'TradeGothicNo.20CondensedBold';
+	font-size: 24px;
+	margin-bottom: 24px;
+	line-height: 32px;
+}
 /*  ############# AGE GATE ############# */ 
 
 .age-gate-background {
@@ -634,6 +852,12 @@ button:focus {
 	bottom:0;
 	display: block;
 	background: white;
+	font-family: 'TradeGothicBold';
+}
+.age-gate-inner {
+	border: solid 3px orange;
+	padding: 0;
+	overflow: scroll;
 }
 .gate-hidden {
 	display: none;
@@ -649,14 +873,49 @@ button:focus {
 	max-width: auto;
 }
 .age-gate-inner {
-	border: solid 2px red;
-	max-height: 500px;
+	
+	
+	
 }
 label.error {
 	color: red;
 	display: block;
 }
 
+
+/*  ############### RECIPIES ############### */
+.directions .directions-title {
+	font-family: 'TradeGothicNo.20CondensedBold';
+	font-size: 16px;
+	margin-bottom: 12px;
+}
+.directions p {
+	max-width: 640px;
+	margin: 0 auto
+}
+.ingrdients-row {
+	margin-bottom: 24px;
+}
+/*
+@media (max-width:1024px) {
+	body {
+		min-width: 1024px !important	
+	}
+}
+*/
+@media (max-width:1024px) {
+
+	.page-title, .cocktail-title {
+		font-size: 40px;
+	}
+	.page-sub-title {
+		font-size: 23px;
+	}
+	.main-footer .footer-link{
+		font-size: 14px;
+	}
+
+}
 /* TABLET VERTICAL */
 @media (max-width:800px) {
 	body {
@@ -669,14 +928,19 @@ label.error {
 		width: auto;
 		margin: 0 auto;
 		position: relative;
+		left: auto;
+		top: 80px;
+		right: auto;
 		img {
 			position: relative;
-			top: auto;
+			top: 60px;
 			left: auto;
+			margin: 0 auto;
 		}
 	}
 	.about-right .table {
 		padding: 30px;
+		position: relative;
 	}
 	.main-footer {
 		text-align: center
@@ -731,18 +995,219 @@ label.error {
 		margin-right: 20px;
 	}
 	.small-logo {
-		right: 50%;
-		bottom: 80px;
+		right: auto;
+		bottom: auto;
 		height: 39px;
 		width: 260px;
+		background-size: 100%;
 		margin-right: -130px;
-		background-size: 395%;
+		position: relative;
+		left: auto;
+		margin: 0 auto 40px auto;
+	}
+	.entertaining .table {
+		margin: 60px 30px;
+		width: auto;
+	}
+	.main-footer {
+		text-align: center;
+	}
+	.shop-it-now {
+		font-size: 19px;
+		position: relative;
+		margin: 0 auto 40px auto;
+		left: auto;
+		clear: both;
+		bottom: auto;
+		display: block;
+	}
+	.rs-wrapper-desktop {
+		position: absolute;
+		left: 70px;
+		top: 100px;
+		right: 70px;
+		bottom: 80px;
+	}
+	.rs-wrapper-mobile {
+/*
+		position: relative;
+		left: auto;
+		top: 80px;
+		right: auto;
+		bottom: auto;
+*/
+		min-height: 480px;
+	}
+	.royalSlider {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		min-width: 260px;
+		min-height: 260px;
+		background: #fff;
+	}
+	.mobile-hidden {
+		display: none;
+	}
+	
+	.age-gate-image {
+	max-height: 180px;
+	width: auto;
+	display: block;
+	margin: 0 auto;
 	}
 
-}
 
+}
 /* MOBILE PHONE */
 @media (max-width: 640px) { 
 
+}
+
+
+@media (max-height:750px) { 
+	.sixty {
+		padding: 5% 0%;
+	}
+}
+
+@media (max-height:600px) { 
+	.sixty {
+		padding: 1% 0%;
+	}
+}
+
+
+
+
+
+
+
+
+
+/* ######################## AGE GATE  REVISED ######################## */
+.birthday {
+	margin-bottom: 12px;
+}
+.age-gate-background {
+	position: fixed;
+	z-index: 1000;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	display: block;
+	font-family: 'TradeGothicNo.2Bold';
+	padding: 0 2%;
+}
+.gate-hidden {
+	display: none;
+	height: 0px;
+	overflow: hidden;
+	opacity: 0;
+	visibility: hidden;
+}
+#age-gate-form {
+	position: absolute;
+	top: 20%;
+}
+#age-gate-form p,
+#age-gate-form p a {
+	text-align: center;
+	font-size: 12px;
+	line-height: 16px;
+	margin-bottom: 24px;
+}
+#age-gate-form p .iconSeparate {
+	margin-right: 10px;
+	color: #c39c2c;
+}
+#age-gate-form .bigLabel {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+.age-gate-image {
+	z-index: 0;
+	height: 100%;
+	position: absolute;
+	padding-left: 10%;
+}
+
+.enterSite {
+	background: #c39c2c;
+	color: #fff;
+	border: none;
+	padding: 5px;
+	text-transform: uppercase;
+	letter-spacing: 4px;;
+	padding: 10px 25px 5px 25px;
+	font-size: 30px;
+	font-family: 'TradeGothicNo.2Bold';
+	.transition-medium;
+}
+.enterSite:hover {
+	opacity: .8;
+}
+input[type=checkbox] {
+	height: 18px;
+	width: 18px;
+	line-height: 15px;
+	background: #fff;
+	font-size: 15px;
+	border: solid 1px #c39c2c;
+	
+}
+
+#Day_form,
+#Month_form,
+#Year_form,
+#Country_form {
+	height: 50px;
+	font-size: 30px;
+	padding-left: 5px;
+	
+	border: solid 1px #c39c2c;
+	background: white;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0px;
+	
+	font-family: 'TradeGothicNo.2Bold';
+}
+#Country_form {
+	width: 97%;
+	margin-bottom: 12px;
+	background: url(/css/img/dropdown_bkg.png) no-repeat right top;
+}
+#Day_form,
+#Month_form {
+	width: 23%;
+}
+#Year_form {
+	width: 50%;
+}
+
+
+
+@media (max-width: 768px) {
+	.age-gate-background {
+		padding: 5% 10%;
+		overflow: scroll;
+	}
+	.age-gate-image {
+		max-width: 100%;
+		height: auto;
+		position: relative;
+		margin: 0 auto;
+	}
+	#age-gate-form {
+		position: relative;
+	}
 }
 

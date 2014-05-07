@@ -9,14 +9,16 @@
 		<div class="table">
 			<div class="table-cell">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
+					<div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
 					<div class="table">
 						<div class="table-cell text-center">
 							<div>
-							<h1>{title}</h1>
+							<h1 class="page-title">{title}</h1>
+							
 							<figure class="video-wrapper">
 							{entertaining_video_embed_code}
 							</figure>
+							
 							{entertaining_text}
 							</div>
 						</div>
@@ -26,9 +28,9 @@
 			</div>							
 		</div>
 		{bars}
-		<div class="small-logo entertaining"><small>Chandon Summer</small></div>
+		<div class="small-logo small-logo-entertaining"><small>Chandon Summer</small></div>
+		{embed="inc/.shop-it-link"}
 	</article>
-	{embed="inc/.shop-it-link"}
 	
 </section>
 {/exp:channel:entries}

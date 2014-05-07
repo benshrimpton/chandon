@@ -6,28 +6,29 @@
 	{hamburger}
 	{embed="inc/.social-share"}
 	
-		<div class="about-left">
-			<div class="table">
-				<figure class="table-cell">
-					<img src="{about_image}" class="img-responsive" />
-				</figure>
-			</div>
-		</div>
+	
+	
+		<figure class="about-left mobile-hidden">
+				<img src="{about_image}" class="img-responsive" />
+		</figure>
+
 				
 		<div class="about-right">
 			<div class="table">
 				<div class="table-cell">
-					<h1>{title}</h1>
-					<h2>{about_sub_title}</h2>
+					<h1 class="page-title">{title}</h1>
+					<h2 class="page-sub-title">{about_sub_title}</h2>
 					{about_text}
 				</div>
 			</div>
 		</div>		
 									
+		
+		<div class="small-logo small-logo-about"><small>Chandon Summer</small></div>
+		{embed="inc/.shop-it-link"}
 		{bars}
-		<div class="small-logo about"><small>Chandon Summer</small></div>
 	</article>
-	{embed="inc/.shop-it-link"}
+	
 	
 </section>
 {/exp:channel:entries}

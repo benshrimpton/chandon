@@ -1,132 +1,67 @@
 {mobile_vars}<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
-		<meta name="author" content="Chandon Summer" />
-		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
-		<title>Chandon Summer</title>
+<title>Chandon Summer</title>
 
-		{exp:automin:less attribute:type="text/css" attribute:rel="stylesheet"}
-		<link type="text/css" rel="stylesheet" href="/css/bootstrap.less" />
-		<link type="text/css" rel="stylesheet" href="/css/main.less" />
-		{/exp:automin:less}
+<meta name="author" content="Chandon" />
+<meta name="description" content="Chandon Summer" />
 
+{!-- #### OG TAGS #### --}
+{exp:channel:entries channel="meta_data" limit="1" disable="member_data|comments|trackbacks"}
+<meta property="og:title" content="{site_name}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{site_url}">
+<meta property="og:image" content="{og_image}">
+<meta property="og:site_name" content="{site_name}">
+<meta property="og:description" content="{meta_description}">
+{/exp:channel:entries}
+
+{exp:automin:less attribute:type="text/css" attribute:rel="stylesheet"}
+<link rel="stylesheet" type="text/css" href="/js/vendor/royalslider/royalslider.less">
+<link rel="stylesheet" type="text/css" href="/js/vendor/royalslider/skins/chandon/rs-chandon.less">
+{/exp:automin:css}
+{exp:automin:less attribute:type="text/css" attribute:rel="stylesheet"}
+<link type="text/css" rel="stylesheet" href="/css/bootstrap.less" />
+<link type="text/css" rel="stylesheet" href="/css/main.less" />
+{/exp:automin:less}
+
+</head>
+<body{exp:classee_body}>
 
 		
-	<style type="text/css">
-			.menu {
-				background: #dde;
-				position: fixed;
-				top: 0; left: 0; bottom: 0;
-				max-width: 1000px;
-				width: 30%;
-				z-index: 999;
-				-webkit-transform: translate3d(-100%, 0, 0);
-				transform: translate3d(-100%, 0, 0);
-
-				-webkit-transition: all 0.3s ease-in-out;
-				-moz-transition: all 0.3s ease-in-out;
-				transition: all 0.3s ease-in-out;
-			}
-			.menu.open {
-				-webkit-transform: translate3d(0, 0, 0);
-				-moz-transform: translate3d(0, 0, 0);
-				transform: translate3d(0, 0, 0);
-			}
-
-			.menu-toggle-button {
-				position: fixed;
-				top: 0; right: 0;
-				border: none;
-				padding: 0.6em 1.2em;
-				background: #111;
-				color: #fff;
-				font-family: 'Lato', Calibri, Arial, sans-serif;
-				font-size: 1em;
-				letter-spacing: 1px;
-				text-transform: uppercase;
-				cursor: pointer;
-				display: inline-block;
-				margin: 3px 2px;
-			}
-
-			button:hover {
-				background: #222;
-			}
-
-			#one, #two, #three, #four {
-				height: 700px;
-				background: #2a2;
-			}
-			#two, #four {
-				background: #a2a;
-			}
-	</style>
-
-	</head>
-	<body>
-		<div id="page">
+		
+		{layout:contents}
 
 
-			<header id="header" class="">
-
-			
-
-				<div class="">
-					<button class="menu-toggle-button">Menu</button>
-				</div>
-				
-				{embed="inc/.social_share"}
-			</header>
-
-
-			<main id="content">
-
-				{layout:contents}
-
-			</main>
-
-
-			
-
-
-			
-
-
-			<footer id="footer" class="mm-fixed-bottom">
-				<h4 class="shop-it">
-					<a href="#" target="_blank">SHOP IT</a>
-				</h4>
-			</footer>
-
-
+<footer id="footer" class="main-footer container-fluid">
+	<div class="row">
+	<div class="col-md-6 col-lg-6 text-center">
+		<p>Chandon supports the responsible consumption of wines and spirits, through Moët Hennessy, member of the European Forum for Responsible Drinking (<a href="http://www.responsibledrinking.eu">www.responsibledrinking.eu</a>), Discus (<a href="http://www.discus.org" target="_blank">www.discus.org</a>), EntrepriseetPrévention, andCEEV (<a href="http://www.wineinmoderation.eu" target="_blank">www.wineinmoderation.eu</a>). Please enjoy responsibly.</p>
+	</div>
+	<div class="col-md-6 col-lg-6">
+		<div class="row">
+			<div class="col-md-6"><a href="http://www.chandon.com/privacy-policy.html" class="footer-link" target="_blank">PRIVACY POLICY</a></div>
+			<div class="col-md-6"><a href="http://www.chandon.com/terms-and-conditions.html" class="footer-link" target="_blank">TERMS &amp; CONDITIONS</a></div>
 		</div>
+	</div>
+</footer>
 
 
-		<nav class="menu">
-			<button class="menu-toggle-button">Menu</button>
-			<h2 class="">Sidebar</h2>
-			<ul>
-				<li><a class="icon icon-data" href="#one">Data Management</a></li>
-				<li><a class="icon icon-location" href="#second">Location</a></li>
-				<li><a class="icon icon-study" href="#three">Study</a></li>
-				<li><a class="icon icon-photo" href="#three">Collections</a></li>
-				<li><a class="icon icon-wallet" href="#three">Credits</a></li>
-			</ul>
-		</nav>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+{exp:automin:js}
+<script type="text/javascript" src="/js/vendor/bootstrap.js"></script>
+<script type="text/javascript" src="/js/vendor/jquery.easing.js"></script>
+<script type="text/javascript" src="/js/vendor/waitForImages.js"></script>
+<script type="text/javascript" src="/js/vendor/fitvids.js"></script>
+<script type="text/javascript" src="/js/vendor/royalslider/jquery.royalslider.min.js"></script>
+<script type="text/javascript" src="/js/vendor/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/js/vendor/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+{/exp:automin:js}
 
-
-
-
-
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		{!-- {exp:automin:js}{/exp:automin:js} --}
-		<script type="text/javascript" src="/src/js/jquery.mmenu.js"></script>
-		<script type="text/javascript" src="/js/vendor/jquery.easing.js"></script>
-		<script type="text/javascript" src="/js/vendor/waitForImages.js"></script>
-		<script type="text/javascript" src="/js/vendor/fitvids.js"></script>
-		<script type="text/javascript" src="/js/main.js"></script>
-
-	</body>
+</body>
 </html>
